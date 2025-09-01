@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>Model Housing Society</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .foter {
+      padding: 20px 0;
+      position: static;
+      bottom: 0;
+    }
+
+    .form-section {
+      margin: 80px auto;
+      max-width: 600px;
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Navbar -->
+  <div class="container-fluid nav-bar bg-transparent">
+    <nav class="navbar navbar-expand-lg navbar-dark py-2 px-4 container-fluid nav-bar bg-dark" 
+      style="border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+        <img class="img-fluid" src="images/citi-logo-3d.png" alt="city housing Society"
+          style="width: 55px; height: auto; margin-right: 10px;">
+        <h1 class="m-0 text-primary text-white" style="font-size: 30px;">Model Housing Society</h1>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+          <a href="index.html" class="nav-item nav-link" style="margin: 0 10px;">Home</a>
+          <a href="service.html" class="nav-item nav-link active" style="margin: 0 10px;">Services</a>
+          <a href="property.html" class="nav-item nav-link" style="margin: 0 10px;">Property</a>
+          <a href="contact.html" class="nav-item nav-link" style="margin: 0 10px;">Contact Us</a>
+          <a href="about.html" class="nav-item nav-link" style="margin: 0 10px;">About Us</a>
+        </div>
+        <a href="login.html" class="btn btn-primary px-3 d-none d-lg-flex" style="margin-left: 15px;">Add Property</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Booking Form Section -->
+  <div class="container form-section">
+    <h2 class="mb-4 text-center">Book Your Service</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name:</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter your name" required />
+      </div>
+      <div class="mb-3">
+        <label for="contact" class="form-label">Contact Number:</label>
+        <input type="tel" id="contact" class="form-control" placeholder="03XX-XXXXXXX" required />
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label">Address:</label>
+        <textarea id="address" class="form-control" rows="3" placeholder="Enter your address" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="date" class="form-label">Booking Date:</label>
+        <input type="date" id="date" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="time" class="form-label">Preferred Time:</label>
+        <input type="time" id="time" class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Book Now</button>
+    </form>
+  </div>
+
+  <!-- ✅ Footer -->
+  <div class="foter">
+    <p>&copy; 2025 Model Housing Society. All Rights Reserved.</p>
+  </div>
+
+  <!-- ✅ Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ✅ JS to prevent past date/time -->
+  <script>
+    // Set today's date as min for date input
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('date').setAttribute('min', today);
+
+    // Optional: Time validation can be handled server-side for more accuracy
+  </script>
+   <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

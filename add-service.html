@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Service</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script type="module" src="js/add-service.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Add Service Provider (Admin Only)</h2>
+    <form id="serviceForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" required />
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select id="category" class="form-control" required>
+          <option value="electrician">Electrician</option>
+          <option value="plumber">Plumber</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="contact" class="form-label">Contact</label>
+        <input type="text" class="form-control" id="contact" required />
+      </div>
+      
+    </form>
+  </div>
+</body>
+</html>

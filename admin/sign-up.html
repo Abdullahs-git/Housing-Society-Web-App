@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- firestore database-->
+  <script type="module" src="js/signup.js"></script>
+  <script type="module" src="js/firebaseConfig.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .login-container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .form-control {
+      border-radius: 20px;
+    }
+    .btn-primary {
+      border-radius: 20px;
+    }
+    .login-footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <div class="container-fluid nav-bar bg-transparent">
+    <nav class="navbar navbar-expand-lg navbar-dark py-2 px-4 container-fluid nav-bar bg-dark" 
+    style="border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+        <img class="img-fluid" src="images/citi-logo-3d.png" alt="model housing Society"
+        style="width: 55px; height: auto; margin-right: 10px;" >
+        <h1 class="m-0 text-primary text-white" style="font-size: 30px; color: #ffffff;">Model Housing Society</h1>
+      </a>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="login.html" class="nav-item nav-link" style="margin: 0 10px;">Login</a>
+          <a href="contact.html" class="nav-item nav-link" style="margin: 0 10px;">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
+  <div class="login-container shadow">
+    <h2>Sign Up</h2>
+    <form class="bg-white" id="signupform">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email-signup" placeholder="Enter email" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password-signup" placeholder="Password" required>
+      </div>
+      <div class="mb-3">
+        <label for="confirm-password" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password" required>
+        <div class="error-message" id="error-message">Passwords do not match</div>
+      </div>
+      <button type="submit" class="btn btn-primary w-100" id="signup-btn">Sign Up</button>
+    </form>
+  </div>
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-light py-4">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2024  Model Housing Society. All Rights Reserved.</p>
+    </div>
+  </div>
+  <!-- Footer End -->
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    // Check if passwords match
+    document.getElementById('confirm-password').addEventListener('input', function() {
+      const password = document.getElementById('password-signup').value;
+      const confirmPassword = this.value;
+      const errorMessage = document.getElementById('error-message');
+      if (password !== confirmPassword) {
+        errorMessage.style.display = 'block';
+      } else {
+        errorMessage.style.display = 'none';
+      }
+    });
+    document.querySelector('form').addEventListener('submit', function(event) {
+      const password = document.getElementById('password-signup').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      
+      if (password !== confirmPassword) {
+        event.preventDefault();
+        alert("Passwords do not match!");
+      }
+    });
+  </script>
+</body>
+</html>

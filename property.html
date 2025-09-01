@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Model Housing Society</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+       <!-- Navbar Start -->
+       <div class="container-fluid nav-bar bg-transparent">
+        <nav class="navbar navbar-expand-lg  navbar-dark py-2 px-4  container-fluid nav-bar bg-dark" 
+          style="border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                
+                    <img class="img-fluid" src="images/citi-logo-3d.png" alt="city housing Society"
+                    style="width: 55px; height: auto; margin-right: 10px;" >
+            
+                <h1 class="m-0 text-primary text-white" style="font-size: 30px; color: #ffffff;">Model Housing Society</h1>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-item nav-link" style ="margin: 0 10px;" >Home</a>
+                    <a href="service.html" class="nav-item nav-link" style=" margin: 0 10px;" >Services</a>
+                    <a href="property.html" class="nav-item nav-link active" style="margin: 0 10px;">Property</a>
+                    <a href="contact.html" class="nav-item nav-link" style="margin: 0 10px;">Contact Us</a>
+                    <a href="about.html" class="nav-item nav-link" style="margin: 0 10px;">About Us</a>
+                </div>
+                <a href="login.html" class="btn btn-primary px-3 d-none d-lg-flex" style="margin-left: 15px;">Add Property</a>
+            </div>
+        </nav>
+    </div>  
+    <!-- Navbar End -->
+
+
+
+
+        <!-- Header Start -->
+        <div class="container-fluid header bg-white p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mb-4">Property</h1> 
+                        <nav aria-label="breadcrumb animated fadeIn">
+                        <ol class="breadcrumb text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-body active" aria-current="page">Property</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <img class="img-fluid" src="images/header.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+       <!-- Search Start -->
+<div class="container-fluid bg-gold mb-0 wow fadeIn" data-wow-delay="0.1s"
+style="padding: 35px; margin-top: 0; border-radius: 35px; background-color: gold;">
+<div class="container" style="border-radius: 35px; overflow: hidden;">
+    <div class="row g-3 align-items-center">
+        <div class="col-md-10">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <input id="searchKeyword" type="text" class="form-control border-0 py-3" placeholder="Search Keyword"
+                        style="border-radius: 35px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                </div>
+                <div class="col-md-4">
+                    <select id="searchType" class="form-select border-0 py-3"
+                        style="border-radius: 35px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <option value="all" selected>All Types</option>
+                        <option value="for-sale">For Sale</option>
+                        <option value="for-rent">For Rent</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input id="searchLocation" type="text" class="form-control border-0 py-3" placeholder="Location"
+                        style="border-radius: 35px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button id="searchBtn" class="btn btn-dark border-0 w-100 py-3"
+                style="border-radius: 35px; color: white; font-weight: bold; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                Search
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Search End -->
+
+
+
+    <!-- Property List Section -->
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col text-center">
+                <button id="filterSale" class="btn btn-primary mx-2">For Sale</button>
+                <button id="filterRent" class="btn btn-dark mx-2">For Rent</button>
+                <button id="filterAll" class="btn btn-secondary mx-2">All</button>
+            </div>
+        </div>
+        <div class="row g-4" id="propertyList">
+            <!-- Properties will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Get In Touch</h5>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Model Housing   Sialkot,Pakistan</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+92 3217497144</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@ModelHousingsocitey.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <!--actions-->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Quick Links</h5>
+                <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                <a class="btn btn-link text-white-50" href="service.html">Our Services</a>
+                <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+            </div>
+            <!--gallery images-->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Photo Gallery</h5>
+                <div class="row g-2 pt-2">
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-1.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-2.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-3.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-4.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-5.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--suggestion box-->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Your Feedback Matters</h5>
+                <p>We value your suggestions and ideas to improve our services.</p>
+                <form>
+                    <textarea class="form-control bg-transparent w-100 py-3 mb-3 ps-3 text-white" rows="3" placeholder="Write your suggestion....." style="border: 1px solid #ffffff;" name="" id=""></textarea>
+                    <button type="submit" class="btn btn-primary w-100 py-2">Submit</button>
+    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="text-primary border-bottom" href="#">Model Housing Society</a>, All Right Reserved. 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <script type="module" src="js/fetchProperties.js"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

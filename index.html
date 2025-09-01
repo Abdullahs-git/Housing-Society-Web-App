@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Model Housing Society</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="module" src="js/appointment.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar bg-transparent">
+        <nav class="navbar navbar-expand-lg  navbar-dark py-2 px-4  container-fluid nav-bar bg-dark" 
+          style="border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <a href="index.php" class="navbar-brand d-flex align-items-center text-center">
+                
+                    <img class="img-fluid" src="images/citi-logo-3d.png" alt="city housing Society"
+                    style="width: 55px; height: auto; margin-right: 10px;" >
+            
+                <h1 class="m-0 text-primary text-white" style="font-size: 30px; color: #ffffff;">Model Housing Society</h1>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-item nav-link active" style ="margin: 0 10px;" >Home</a>
+                    <a href="service.html" class="nav-item nav-link" style=" margin: 0 10px;" >Services</a>
+                    <a href="property.html" class="nav-item nav-link" style="margin: 0 10px;">Property</a>
+                    <a href="contact.html" class="nav-item nav-link" style="margin: 0 10px;">Contact Us</a>
+                    <a href="about.html" class="nav-item nav-link" style="margin: 0 10px;">About Us</a>
+                </div>
+                <a href="login.html" class="btn btn-primary px-3 d-none d-lg-flex" style="margin-left: 15px;">Add Property</a>
+            </div>
+        </nav>
+    </div>  
+    <!-- Navbar End -->
+        <!-- Header Start mera -->
+        <div class="container-fluid header p-0" style="margin-bottom: 0;">
+            <div class="row g-0 align-items-center justify-content-center">
+                <div class="col-12 p-0">
+                    <video autoplay loop muted id="background-video">
+                        <source src="video/Best Housing Society in Pakistan – Citi Housing (PVT) Ltd.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="header-content text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h1 class="text-white mb-4 animated fadeIn" style="font-family: 'Poppins', sans-serif; font-size: 3rem; font-weight: 600;">
+                            INNOVATING CITIES,<br>ENRICHING EXPERIENCES
+                        </h1>
+                        <a href="property.html" class="btn btn-transparent py-3 px-5 animated fadeIn">Discover Your Future Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Header End -->
+
+
+        <!-- Search Start -->
+<div class="container-fluid bg-gold mb-0 wow fadeIn" data-wow-delay="0.1s"
+style="padding: 35px; margin-top: 0; border-radius: 35px; background-color: gold;">
+<div class="container" style="border-radius: 35px; overflow: hidden;">
+    <div class="row g-3 align-items-center">
+        <div class="col-md-10">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <input id="indexSearchKeyword" type="text" class="form-control border-0 py-3" placeholder="Search Keyword"
+                        style="border-radius: 35px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                </div>
+                <div class="col-md-4">
+                    <select id="indexSearchType" class="form-select border-0 py-3"
+                        style="border-radius: 35px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                        <option value="all" selected>All Types</option>
+                        <option value="for-sale">For Sale</option>
+                        <option value="for-rent">For Rent</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input id="indexSearchLocation" type="text" class="form-control border-0 py-3" placeholder="Location"
+                        style="border-radius: 35px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button id="indexSearchBtn" class="btn btn-dark border-0 w-100 py-3"
+                style="border-radius: 35px; color: white; font-weight: bold; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+                Search
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Search End -->
+
+
+
+        <!-- Category Start -->
+        <div class="container-xxl py-5" style="background-color: #ffffff;">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3"> Explore Property Types</h1>
+                    <p>Discover a wide range of properties tailored to meet your needs. Whether it's a luxury villa, modern apartment, or a cozy home, we have something for everyone.</p>
+                </div>
+               <!-- Property Cards -->
+            <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card property-card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden; transition: transform 0.3s;">
+                    <img src="images/icon-apartment.png" class="card-img-top p-4" alt="Apartment" style="max-height: 90px; object-fit: contain;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-2">Apartment</h5>
+                        <p class="card-text">Compact and modern spaces ideal for city living.</p>
+                        <p style="font-weight: bolder;"> 100+ <br> apartments avaliable</p>
+                    </div>
+                </div>
+            </div>
+           
+
+            <!-- Card 2 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card property-card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden; transition: transform 0.3s;">
+                    <img src="images/icon-villa.png" class="card-img-top p-4" alt="Villa" style="max-height: 90px; object-fit: contain;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-2">Villa</h5>
+                        <p class="card-text">Elegant and spacious residences for luxury living.</p>
+                        <p class="card-text" style="font-weight: bolder;">20+ <br> villa avaliable</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card property-card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden; transition: transform 0.3s;">
+                    <img src="images/icon-house.png" class="card-img-top p-4" alt="Home" style="max-height: 90px; object-fit: contain;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-2">Home</h5>
+                        <p class="card-text">Comfortable and cozy homes for families.</p>
+                        <p class="card-text" style="font-weight: 900;">400+ <br> house are avaliable</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-6 data-wow-fadeIn" data-wow-delay="0.1s">
+                <div class="card property-card border-0 shadow-sm" style="border-radius: 15px; overflow: hidden; transition: transform 0.3s;">
+                    <img src="images/icon-housing.png" class="card-img-top p-4" alt="Office" style="max-height: 90px; object-fit: contain;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-2">Office</h5>
+                        <p class="card-text">Functional workspaces designed for productivity.</p>
+                        <p class=" card-text">A broad <br> range of Office spaces</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- Category End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                  <!----image section-->
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                            <img class="img-fluid w-100" src="images/about.jpg">
+                        </div>
+                    </div>
+                    <!--test section-->
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="mb-4" style="color: #222; font-weight: bold;">Your Trusted Partner in Real Estate</h1>
+                        <p class="mb-4" style="line-height: 1.8; color: #555;">
+                            At Model Housing Society, we specialize in connecting you with properties that meet your unique needs. 
+                            Whether you're looking for your dream home, a luxury villa, or an ideal office space,
+                            our team is dedicated to ensuring a seamless experience every step of the way.
+                        </p>
+                        <p style="color: #555;"><i class="fa fa-check text-primary me-3"></i>Wide selection of premium properties</p>
+                        <p style="color: #555;"><i class="fa fa-check text-primary me-3"></i>Transparent and reliable processes</p>
+                        <p style="color: #555;"><i class="fa fa-check text-primary me-3"></i>Dedicated support to find your perfect fit</p>
+                        <a class="btn btn-primary py-3 px-5 mt-3" href="about.html" style="border-radius: 50px;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Call to Action Start -->
+<div class="container-xxl py-5" style="background-color: #f9f9f9;">
+    <div class="container">
+        <div class="bg-white rounded p-3" style="border: dashed rgba(0,0,0,.1)">
+            <div class="row g-5 align-items-center">
+                <!-- Image Section -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid rounded w-100" src="images/call-to-action.jpg" alt="">
+                </div>
+                <!-- Text Section -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="mb-4">
+                        <h1 class="mb-3" style="color: #222; font-weight: bold;">Connect with Our Certified Real Estate Experts</h1>
+                        <p style="color: #555;">Looking for personalized guidance? Our certified agents are here to assist you in finding the perfect property that meets your needs. Reach out for a consultation or schedule an appointment at your convenience.</p>
+                    </div>
+                    <a href="https://wa.me/923217497144" target="_blank" class="btn btn-primary py-3 px-4 me-2">
+                        <i class="fa fa-phone-alt me-2"></i>Contact via WhatsApp
+                    </a>
+                    <button class="btn btn-dark py-3 px-4" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                        <i class="fa fa-calendar-alt me-2"></i>Schedule Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Call to Action End -->
+
+<!-- Appointment Modal -->
+<div id="appointmentModal" class="modal fade" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form id="appointmentForm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="appointmentModalLabel">Schedule Your Appointment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="appointmentDate" class="form-label">Select a Date:</label>
+                    <input type="date" id="appointmentDate" class="form-control mb-3" required>
+                    <label for="email" class="form-label">Your Email:</label>
+                    <input type="email" id="email" class="form-control mb-3" placeholder="Enter your email" required>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5" style="background-color: #f9f9f9;">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3" style="color: #222; font-weight: bold;"> What Our Clients Say!</h1>
+                    <p style="color: #555; font-size: 1.1rem;">Our clients are at the heart of everything we do. Hear their stories and learn how we've helped them find their dream properties and achieve their goals.</p>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item bg-light rounded p-3">
+                        <div class="bg-white border rounded p-4 shadow-sm">
+                            <p style="color: #555;">"City Housing Society exceeded my expectations. The team was incredibly professional, and they helped me find the perfect home for my family. Highly recommended!"</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid flex-shrink-0 rounded" src="images/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                                <div class="ps-3">
+                                    <h6 class="fw-bold mb-1" style="color: #222;">ayesha javid</h6>
+                                    <small style="color: #888;">Profession</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-3">
+                        <div class="bg-white border rounded p-4 shadow-sm">
+                            <p>"The team made the process so smooth. I found the ideal property for my business, and their support throughout was outstanding. Thank you!"</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid flex-shrink-0 rounded" src="images/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                                <div class="ps-3">
+                                    <h6 class="fw-bold mb-1" style="color: #555;">zohaib bajwa</h6>
+                                    <small style="color: #888;">Profession</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-3">
+                        <div class="bg-white border rounded p-4 shadow-sm">
+                            <p>"Thanks to Model Housing Society, I found my dream villa. Their expertise and dedication made all the difference. I couldn't be happier!"</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid flex-shrink-0 rounded" src="images/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                                <div class="ps-3">
+                                    <h6 class="fw-bold mb-1" style="color: #555;">Ammad bajwa</h6>
+                                    <small style="color: #888;">Profession</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+
+        <!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Get In Touch</h5>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Model Housing   Sialkot,Pakistan</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+92 3217497144</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@ModelHousingsocitey.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <!--actions-->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Quick Links</h5>
+                <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+                <a class="btn btn-link text-white-50" href="contact.html">Contact Us</a>
+                <a class="btn btn-link text-white-50" href="service.html">Our Services</a>
+                <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+            </div>
+            <!--gallery images-->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Photo Gallery</h5>
+                <div class="row g-2 pt-2">
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-1.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-2.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-3.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-4.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-5.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid rounded bg-light p-1" src="images/property-6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--suggestion box-->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Your Feedback Matters</h5>
+                <p>We value your suggestions and ideas to improve our services.</p>
+                <form>
+                    <textarea class="form-control bg-transparent w-100 py-3 mb-3 ps-3 text-white" rows="3" placeholder="Write your suggestion....." style="border: 1px solid #ffffff;" name="" id=""></textarea>
+                    <button type="submit" class="btn btn-primary w-100 py-2">Submit</button>
+    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="text-primary border-bottom" href="#">Model Housing Society</a>, All Right Reserved. 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- At the very end of index.html -->
+<script>
+    document.getElementById('indexSearchBtn').addEventListener('click', () => {
+        const keyword = document.getElementById('indexSearchKeyword').value.trim();
+        const type = document.getElementById('indexSearchType').value;
+        const location = document.getElementById('indexSearchLocation').value.trim();
+
+        const query = new URLSearchParams({
+            keyword,
+            type,
+            location
+        });
+
+        window.location.href = `property.html?${query.toString()}`;
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const dateInput = document.getElementById('appointmentDate');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  });
+
+  // Optional: Validate again on form submit
+  document.getElementById('appointmentForm').addEventListener('submit', function (e) {
+    const date = document.getElementById('appointmentDate').value;
+    const email = document.getElementById('email').value;
+
+    const today = new Date().toISOString().split('T')[0];
+    if (date < today) {
+      e.preventDefault();
+      alert('Please select a valid date (today or later).');
+      return;
+    }
+
+    alert(`Appointment scheduled for ${date}.\nConfirmation will be sent to ${email}.`);
+    this.reset();
+
+    const modal = bootstrap.Modal.getInstance(document.getElementById('appointmentModal'));
+    modal.hide();
+  });
+</script>
+
+</body>
+
+</html>
