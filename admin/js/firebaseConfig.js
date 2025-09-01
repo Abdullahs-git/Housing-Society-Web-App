@@ -5,14 +5,7 @@ import { getDatabase, ref, push, set, get, equalTo, orderByChild, query, remove,
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAPujmzWYgPATJiHJ2vRJdngGM4--Be3jM",
-  authDomain: "society-57457.firebaseapp.com",
-  databaseURL: "https://society-57457-default-rtdb.firebaseio.com",
-  projectId: "society-57457",
-  storageBucket: "society-57457.firebasestorage.app",
-  messagingSenderId: "1513819947",
-  appId: "1:1513819947:web:3004323447bfc6e336ff6e"
-};
+}
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
